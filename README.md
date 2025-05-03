@@ -25,6 +25,7 @@ The purpose of this course is to introduce the foundational principles of modern
 ## Tools & Technologies
 
 - Vim + 'live-server' for command line and local previewing
+- Visual Studio Code with Live Preview
 - Git and GitHub for version control
 - Browser DevTools
 
