@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Edusketch</title>
+  </head>
+  <body>
+    <header>
+      <h1>Edusketch</h1>
+    </header>
+    <nav>
+      <a href="index.html">Home</a>&nbsp;&nbsp;&nbsp;<a href="competition.html">Competition</a>&nbsp;&nbsp;&nbsp;<a href="audience.html">Audience</a>
+    </nav>
+    <main>
+      <br>
+      <h2>Who We're Up Against</h2>
+      <h4>Competitors:</h4>
+      <ul>
+        <li>Microsoft Whiteboard</li>
+        <li>Miro</li>
+        <li>Zoom Whiteboard</li>
+      </ul>
+      <p>There seem to be several digital whiteboards and collaborative tools currently available, many of which seem to be used in virtual meetings. These include patforms such as Microsoft Whiteboard, Miro, and Zoom's whiteboard function. While these tools do offer drawing and collaboration features, they seem to cater to corporate environments or require additional accounts and setup.</p>
+      <h4>What They Do Well</h4>
+      <p>Pros:<br>
+        <ul>
+          <li>Miro:Great UX and board space</li>
+          <li>Microsoft Whiteboard: Integration with Office365</li>
+          <li>Zoom: Built-in convenience</li>
+        </ul>
+        Some of these existing tools provide a clean interface, built-in collaboration features , and integrations with already popular platforms lime Microsoft Office. They also seem to support screen-sharing functionality and exporting.
+      </p>
+      <h4>Where They Fall Short</h4>
+      <p>Cons:<br>
+        <ul>
+          <li>Overcomplication</li>
+          <li>Not education-focused</li>
+          <li>Require logins or accounts</li>
+          <li>Lack features like timed annotations</li>
+        </ul>
+        Most tools seem to be built for business workflows, not learning environments. Few offer features specifically tailored to education like timed vanishing ink for guiding attention. Most require account creation, paywalls, or are too resource-heavy for low end devices.
+      </p>
+      <h4>How Edusketch Does It Better</h4>
+      <p>
+        <ul>
+          <li>Lightweight and student-first</li>
+          <li>Designed specifically for group studying, tutoring, and education</li>
+          <li>Unique vanishink ink feature and timed annotations</li>
+          <li>Future plans for tutor discovery and forums</li>
+        </ul>
+        Edusketch is designed for learners, not boardrooms. It provides instant access to a shared drawing space without needing any accounts or unnecessary extra steps. Its unique vanishing ink can help tutors emphasize certain steps without cluttering the space. Features like tutor matchmaking and a collaborative forum can set it apart from the competition.
+      </p>
+    </main>
+    <footer><h6>Copyright &copy; 2025</h6>
+  </body>
+</html>
