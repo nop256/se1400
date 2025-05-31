@@ -39,15 +39,11 @@ html {
 
 /*-----NAV BOX-----*/
 nav {
-  display:flex;
-  flex-direction:column;
   background-color:rgba(6, 6, 6, 0.8); 
-  position:relative;
+  position:absolute;
   height:100vh;
   grid-row:1/8;
   grid-column:1/2;
-  box-shadow:
-    12px -5px 30px rgba(255,255,255,0.2) /*glow*/;
 }
 
 nav ul {
@@ -62,6 +58,11 @@ nav ul li {
   padding:1rem 0;
 }
 
+nav ul li a {
+  display:inline-block;
+  margin-left:-7px;
+}
+
 nav ul li::after { /*horizontal navigation line separator*/
   content:"";
   position:absolute;
@@ -73,12 +74,6 @@ nav ul li::after { /*horizontal navigation line separator*/
   background-color:#cccdcc; 
   opacity:0.5; 
 }
-
-nav ul li a {
-  display:inline-block;
-  margin-left:-7px;
-}
-
 
 nav h3 {
   box-sizing:content-box;
@@ -95,21 +90,6 @@ nav p {
   margin-top:0.4rem;
   margin-bottom:3.5rem;
 }
-
-nav footer {
-  padding-top:25rem;
-  text-align:center;
-  font-family:arial;
-  font-style:italic;
-  margin-top:auto;
-  margin-bottom:1rem;
-  color:#ccc;
-}
-
-nav footer a {
-  color:#ccc;
-}
-
 /*-----END NAV BOX-----*/
 
 
@@ -134,21 +114,22 @@ main {
   background-color:rgba(255, 255, 255, .95);
   grid-row:2/8;
   grid-column:3/span 5;
-  height:98%;
+  height:97%;
+  padding-top:9px;
   overflow-y:auto;
   box-shadow:
-    19px 5px 20px rgba(0,0,0,0.8), /*shadow*/
-    -12px 5px 30px rgba(255,255,255,0.2); /*glow*/
+    15px 10px 10px rgba(0,0,0,0.8),
+    -5px -10 150px rgba(0,116,160,1);
 }
 
-main .border-gradient { /*border gradient on content box*/
-  position:sticky;
+main::before { /*border gradient on content box*/
+  content:"";
+  position:absolute;
   top:0;
   left:0;
   height:9px;
   width:100%;
   background:repeating-linear-gradient(to right, #0074a0 0 190px,#4c4c4c 100px 500px);
-  z-index:2;
 }
 
 /*------END MAIN CONTENT BLOCK-------*/
@@ -160,7 +141,7 @@ section {
   position:relative;
   padding-left:19rem;
   padding-bottom:5rem;
-  scroll-margin-top:7rem;
+  scroll-margin-top:4rem;
 }
 
 section::before { /*vertical circle node*/
@@ -261,7 +242,7 @@ section span.branch-dot { /*section span branch-dot*/
 
 /*-----PROFILE-----*/
 #profile {
-  padding-right:10rem;
+  padding-right:5rem;
 }
 /*-----END PROFILE-----*/
 
@@ -269,7 +250,7 @@ section span.branch-dot { /*section span branch-dot*/
 
 /*-----EDUCATION-----*/
 #education {
-  padding-right:10rem;
+  padding-right:5rem;
 }
 /*-----END EDUCATION-----*/
 
@@ -277,7 +258,7 @@ section span.branch-dot { /*section span branch-dot*/
 
 /*-----INTERESTS-----*/
 #interests {
-  padding-right:10rem;
+  padding-right:5rem;
 }
 /*-----END INTERESTS-----*/
 
@@ -285,7 +266,7 @@ section span.branch-dot { /*section span branch-dot*/
 
 /*-----GOALS-----*/
 #goals {
-  padding-right:10rem;
+  padding-right:5rem;
 }
 /*-----END GOALS-----*/
 
@@ -293,22 +274,21 @@ section span.branch-dot { /*section span branch-dot*/
 
 /*-----CONTACT----*/
 #contact {
-  padding-right:10rem;
+  padding-right:5rem;
+  height:73%
 }
 /*-----END CONTACT----*/
 
 
 
-/*-----FOOTER-----/
+/*-----FOOTER-----*/
 footer {
   padding-top:25rem;
   text-align:center;
   font-family:arial;
   font-style:italic;
-  margin-bottom:1rem;
-  color:#ccc;
 }
-/-----END FOOTER-----*/
+/*-----END FOOTER-----*/
 
 .icon:hover {
   filter:grayscale(100%) brightness(0%) invert(40%) sepia(100%) saturate(500%) hue-rotate(190deg);
@@ -355,24 +335,14 @@ body {
   font-size:1.7rem; 
 }
 
-.sctn {
-  color:#0074a0;
+.st {
   font-size:2.2rem;
   font-weight:700;
 }
 
 .explorer {
   color:#0074a0;
-  font-weight:700;
-}
-
-.email {
-  color:#0074a0;
-}
-
-.email:hover {
-  filter:grayscale(100%) brightness(0%) invert(40%) sepia(100%) saturate(500%) hue-rotate(0deg);
-  transition:filter 0.3s ease;
+  font-weight:bold;
 }
 /*-----END FONT STYLING-----*/
 
