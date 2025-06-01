@@ -28,13 +28,14 @@ html {
   display:grid;
   height:100%;
   grid-template-rows:6rem repeat(6, 1fr);
-  grid-template-columns:217px minmax(0, 1fr) repeat(5, minmax(0px, 175px)) minmax(0px, 1fr);
+  grid-template-columns:minmax(0,217px) minmax(0, 1fr) repeat(5, minmax(0px, 175px)) minmax(0px, 1fr);
   position:relative;
 }
 /*-----END GRID-----*/
 
 /*-----NAV BOX-----*/
 nav {
+  position:relative;
   display:flex;
   flex-direction:column;
   background-color:rgba(6, 6, 6, 0.8); 
@@ -42,6 +43,7 @@ nav {
   grid-column:1/2;
   width:217px;
   margin-right:1px;
+  z-index:1;
   box-shadow:
     12px -5px 30px rgba(255,255,255,0.2) /*glow*/;
 }
@@ -96,7 +98,7 @@ nav footer {
   font-family:arial;
   font-style:italic;
   margin-top:auto;
-  margin-bottom:1rem;
+  margin-bottom:00.55rem;
   color:#ccc;
 }
 
@@ -133,6 +135,7 @@ main {
   margin-left:15%;
   overflow-y:auto;
   overflow-x:auto;
+  z-index:2;
   box-shadow:
     19px 5px 20px rgba(0,0,0,0.8), /*shadow*/
     -12px 5px 30px rgba(255,255,255,0.2); /*glow*/
@@ -219,6 +222,7 @@ section span.branch-dot { /*section span branch-dot*/
   position:relative;
   padding-top:4.8rem;
   margin-left:129px;
+  z-index:3;
 }
 
 #intro ul {
@@ -375,22 +379,118 @@ body {
 
 
 /*-----MOBILE FORMATTING-----*/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
+  #wrapper {
+  }
+  body {
+    background-image:none;
+  }
+
   nav {
-    display: none;
+    position:relative;
+    background-color:rgba(17, 17, 17, 1); 
+    grid-row:1/-1;
+    z-index:5;
+    height:100%;
+    width:160px;
+  }
+
+  nav h3 {
+    margin:0 1rem;
+    margin-top:2rem;
   }
 
   main {
-    grid-column: 1 / -1; 
-    width: 100%;
-    margin-left: 0;
+    background-color:rgba(255, 255, 255, .95);
+    grid-column: 1/-1; 
+    grid-row:1/-1;
+    width:auto;
+    height:100%;
+    margin-right:0px;
+    margin-left:13%;
     overflow-x:auto;
+  }
+
+  section::after { /*vertical 'timeline'*/
+    content:"";
+    position:absolute;
+    top:-5.1rem;
+  }
+
+  #intro {
+  }
+
+  #intro #selfie img { /*circular self portrait*/
+    width:30px;
+    height:auto;
+  }
+
+  #intro #selfie {
+    padding-top:1.7rem;
+    padding-right:0px;
   }
 
   #intro h1 {
     font-size:2rem;
     text-align:center;
     line-height:1;
+  }
+
+  #intro ul li {/*space between socials icons*/
+    width:70%;
+  }
+
+  #intro-text {
+    padding-top:1.7rem;
+    padding-left:-10px;
+    font-size:1rem; 
+  }
+
+  .sctn {
+    color:#0074a0;
+    font-size:1.2rem;
+    font-weight:700;
+  }
+
+  #profile {
+    padding-right:2rem;
+  }
+
+  #education {
+    padding-right:2rem;
+  }
+
+  #interests {
+    padding-right:2rem;
+  }
+
+  #goals {
+    padding-right:2rem;
+  }
+
+  #contact {
+    padding-right:2rem;
+  }
+
+  .navigate {
+    font-size:1rem; 
+  }
+
+  nav footer {
+    font-size:0.6rem;
+  }
+}
+/*-----MOBILE FORMATTING-----*/
+
+
+
+/*-----SMALL SCREENS FOR PEASANTS-----*/
+
+@media screen and (max-width: 1400px) {
+  #intro h1 {
+    font-size:2rem;
+    text-align:center;
+    line-height:0.8;
   }
 
   #intro ul li {/*space between socials icons*/
@@ -406,3 +506,4 @@ body {
     font-weight:700;
   }
 }
+/*-----END PEASANT SCREENS-----*/
