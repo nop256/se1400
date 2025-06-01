@@ -127,7 +127,7 @@ main {
   position:relative;
   background-color:rgba(255, 255, 255, .95);
   grid-row:2/8;
-  grid-column:2/9;
+  grid-column:1/9;
   height:98%;
   width:70%;
   margin-left:15%;
@@ -406,3 +406,62 @@ body {
     font-weight:700;
   }
 }
+/*-----END MOBILE FORMATTING-----*/
+
+
+
+/*-----4K FORMATTING-----*/
+@media screen and (min-width: 2560px) {
+  #intro {
+    transform: scale(1.5);
+    transform-origin: top left;
+  }
+
+  section {
+    position:relative;
+    padding-left:19rem;
+    padding-bottom:5rem;
+    scroll-margin-top:7rem;
+  }
+
+  section::before { /*vertical circle node*/
+    content:"";
+    position:absolute;
+    left:14.1rem;
+    top:0.35rem; 
+    width:16px;
+    height:16px;
+    background-color:white;
+    border:3px solid #cccccc;
+    border-radius:50%;
+    transform:translateX(-50%);
+    z-index:1;
+  }
+
+  section::after { /*vertical 'timeline'*/
+    top:6.6rem;
+    left:21.3rem;  
+  }
+
+  section span.branch-line { /*horizontal branch line*/
+    content:"";
+    position:absolute;
+    left:calc(14rem + 0.5rem); 
+    top:1rem; 
+    width:3rem;
+    height:2px;
+    background-color:#cccccc;
+  }
+
+  section span.branch-dot { /*section span branch-dot*/
+    position:absolute;
+    left:calc(14rem + 0.5rem + 3rem - 0.35rem);
+    top:0.73rem;
+    width:0.7rem;
+    height:0.7rem;
+    background-color:#cccccc;
+    border-radius:50%;
+    display:block;
+  }
+}
+/*-----END 4K FORMATTING-----*/
