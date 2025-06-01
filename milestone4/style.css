@@ -134,6 +134,7 @@ main {
   width:70%;
   margin-left:15%;
   overflow-y:auto;
+  overflow-x:auto;
   box-shadow:
     19px 5px 20px rgba(0,0,0,0.8), /*shadow*/
     -12px 5px 30px rgba(255,255,255,0.2); /*glow*/
@@ -230,6 +231,7 @@ section span.branch-dot { /*section span branch-dot*/
   flex-flow:row nowrap;
   list-style-type:none;
   padding-left:0rem;
+  margin-top:-1.5%;
 
 }
 
